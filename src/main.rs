@@ -79,10 +79,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     });
 
     while let Some(text) = rx.recv().await {
-        let message = Message::Message {
-            id: peer_id.clone(),
-            text,
-        };
+        let message = Message::new(peer_id.clone(), text);
         send_message(&Arc::clone(&writers), &message).await;
     }
 

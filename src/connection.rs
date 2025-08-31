@@ -24,7 +24,7 @@ pub async fn handle_connection(reader: OwnedReadHalf) {
     while let Ok(Some(line)) = lines.next_line().await {
         let message: Message = serde_json::from_str(&line).unwrap();
         match message {
-            Message::Message { id, text } => {
+            Message { id, text } => {
                 println!("{id}: {text}");
             }
         }
