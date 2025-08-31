@@ -11,3 +11,6 @@ Cargo.lock
 *.ipr
 out/
 .idea_modules/
+
+# Other
+**/.DS_Store
