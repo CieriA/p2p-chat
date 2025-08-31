@@ -1,0 +1,17 @@
+[package]
+name = "p2p-chat"
+version = "0.1.0"
+edition = "2024"
+authors = ["CieriA"]
+license = "ISC"
+repository = "https://github.com/CieriA/p2p-chat"
+readme = "README.md"
+
+[dependencies]
+clap = { version = "4.5.46", features = ["derive"] }
+tokio = { version = "1.47.1", features = ["rt", "rt-multi-thread", "macros", "net", "io-util", "sync"] }
+data-encoding =  "2.9.0"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.143"
+hex = "0.4.3"
+rand = "0.9.2"
