@@ -4,7 +4,7 @@ use {
     std::{error::Error, fmt, net::SocketAddr, str::FromStr},
 };
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Ticket {
     pub id: String,
     pub peers: Vec<SocketAddr>,

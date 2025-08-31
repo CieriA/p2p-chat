@@ -1,12 +1,12 @@
 use clap::{Parser, Subcommand};
 
-#[derive(Parser)]
+#[derive(Debug, Parser)]
 pub struct Args {
     #[command(subcommand)]
     pub command: Command,
 }
 
-#[derive(Subcommand, Debug)]
+#[derive(Debug, Subcommand)]
 pub enum Command {
     /// Creates a new room returning a new ticket
     Open {
